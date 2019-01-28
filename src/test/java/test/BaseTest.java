@@ -1,6 +1,8 @@
-import io.github.bonigarcia.wdm.ChromeDriverManager;
+package test;
+
+import io.github.bonigarcia.wdm.FirefoxDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -9,8 +11,8 @@ public class BaseTest {
 
     @BeforeTest
     public void initDriver(){
-         ChromeDriverManager.chromedriver().arch32().setup();
-         driver = new ChromeDriver();
+         FirefoxDriverManager.firefoxdriver().arch64().setup();
+         driver = new FirefoxDriver();
     }
 
     @AfterTest

@@ -1,13 +1,15 @@
-import org.openqa.selenium.support.ui.ExpectedConditions;
+package test.google;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.google.GoogleResultsPage;
 import pages.google.GoogleStartPage;
+import test.BaseTest;
 
-public class FirstTest extends BaseTest {
+public class GoogleTests extends BaseTest {
 
     @Test
-    public void firstTest() throws InterruptedException {
+    public void googleSearchTest() throws InterruptedException {
         GoogleStartPage startPage = new GoogleStartPage(driver);
         startPage.openHomeURL();
         GoogleResultsPage resultsPage = startPage.search("Selenium");
